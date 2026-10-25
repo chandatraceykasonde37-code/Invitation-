@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>James & Chileshe | Wedding Countdown</title>
+
+  <meta name="description"
+        content="Join us in celebrating James and Chileshe on 14 November 2026. One love, one promise, one journey.">
+
+  <meta property="og:title"
+        content="James & Chileshe — Wedding Countdown">
+
+  <meta property="og:description"
+        content="Our beautiful journey begins on 14 November 2026. Celebrate with us!">
+
+  <meta property="og:type" content="website">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background: linear-gradient(135deg, #f7efe5, #fffaf2);
+      font-family: Georgia, "Times New Roman", serif;
+      color: #5b4735;
+    }
+
+    .invitation {
+      width: 100%;
+      max-width: 430px;
+      padding: 40px 22px;
+      text-align: center;
+      background: #fffdf8;
+      border: 2px solid #c9a45c;
+      outline: 1px solid #c9a45c;
+      outline-offset: 6px;
+      border-radius: 4px;
+      box-shadow: 0 12px 40px rgba(91, 71, 53, 0.12);
+    }
+
+    .rings {
+      font-size: 42px;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow {
+      color: #a88645;
+      letter-spacing: 4px;
+      font-size: 11px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(34px, 9vw, 46px);
+      font-weight: normal;
+      line-height: 1.2;
+      color: #9b7840;
+    }
+
+    .ampersand {
+      display: block;
+      font-size: 27px;
+      font-style: italic;
+      margin: 5px 0;
+    }
+
+    .subtitle {
+      margin-top: 18px;
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .divider {
+      width: 75px;
+      height: 1px;
+      background: #c9a45c;
+      margin: 26px auto;
+    }
+
+    .date {
+      font-size: 23px;
+      color: #9b7840;
+      margin-bottom: 10px;
+    }
+
+    .message {
+      font-size: 14px;
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+
+    .countdown-title {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .countdown {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 7px;
+    }
+
+    .time-box {
+      padding: 14px 3px;
+      background: #f7efe2;
+      border: 1px solid #e0c994;
+      border-radius: 4px;
+    }
+
+    .number {
+      display: block;
+      font-family: Arial, sans-serif;
+      font-size: clamp(20px, 5vw, 27px);
+      color: #98743c;
+      font-weight: bold;
+    }
+
+    .label {
+      display: block;
+      margin-top: 7px;
+      font-family: Arial, sans-serif;
+      font-size: 9px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 12px;
+      line-height: 1.8;
+      font-style: italic;
+    }
+
+    .share-button {
+      display: inline-block;
+      margin-top: 22px;
+      padding: 13px 22px;
+      border: none;
+      border-radius: 25px;
+      background: #a88645;
+      color: white;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .share-button:hover {
+      background: #85652f;
+    }
+
+    @media (max-width: 360px) {
+      .invitation {
+        padding: 32px 15px;
+      }
+
+      .time-box {
+        padding: 12px 2px;
+      }
+
+      .label {
+        font-size: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="invitation">
+
+    <div class="rings">💍</div>
+
+    <p class="eyebrow">A Special Invitation</p>
+
+    <h1>
+      James
+      <span class="ampersand">&</span>
+      Chileshe
+    </h1>
+
+    <p class="subtitle">Are Getting Married</p>
+
+    <div class="divider"></div>
+
+    <p class="date">14 November 2026</p>
+
+    <p class="message">
+      Two hearts, one beautiful promise.<br>
+      A lifetime of love begins here.<br>
+      We would be honoured to celebrate<br>
+      this special day with you.
+    </p>
+
+    <p class="countdown-title">Counting Down to Our Big Day</p>
+
+    <div class="countdown">
+
+      <div class="time-box">
+        <span class="number" id="days">000</span>
+        <span class="label">Days</span>
+      </div>
+
+      <div class="time-box">
+        <span class="number" id="hours">00</span>
+        <span class="label">Hours</span>
+      </div>
+
+      <div class="time-box">
+        <span class="number" id="minutes">00</span>
+        <span class="label">Minutes</span>
+      </div>
+
+      <div class="time-box">
+        <span class="number" id="seconds">00</span>
+        <span class="label">Seconds</span>
+      </div>
+
+    </div>
+
+    <p class="footer">
+      One Love. One Promise. One Journey. 🤍
+      <br>
+      We look forward to celebrating with you.
+    </p>
+
+    <button class="share-button" onclick="shareInvitation()">
+      Share Our Invitation ✨
+    </button>
+
+  </main>
+
+  <script>
+    // Wedding day begins at midnight in Zambia (UTC+02:00).
+    const weddingDate = new Date(
+      "2026-11-14T00:00:00+02:00"
+    ).getTime();
+
+    function updateCountdown() {
+      const now = Date.now();
+      const difference = weddingDate - now;
+
+      if (difference <= 0) {
+        document.getElementById("days").textContent = "000";
+        document.getElementById("hours").textContent = "00";
+        document.getElementById("minutes").textContent = "00";
+        document.getElementById("seconds").textContent = "00";
+
+        document.querySelector(".countdown-title").textContent =
+          "Today Is the Special Day!";
+
+        return;
+      }
+
+      const days = Math.floor(
+        difference / (1000 * 60 * 60 * 24)
+      );
+
+      const hours = Math.floor(
+        (difference / (1000 * 60 * 60)) % 24
+      );
+
+      const minutes = Math.floor(
+        (difference / (1000 * 60)) % 60
+      );
+
+      const seconds = Math.floor(
+        (difference / 1000) % 60
+      );
+
+      document.getElementById("days").textContent =
+        String(days).padStart(3, "0");
+
+      document.getElementById("hours").textContent =
+        String(hours).padStart(2, "0");
+
+      document.getElementById("minutes").textContent =
+        String(minutes).padStart(2, "0");
+
+      document.getElementById("seconds").textContent =
+        String(seconds).padStart(2, "0");
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    async function shareInvitation() {
+      const shareData = {
+        title: "James & Chileshe — Wedding Invitation",
+        text: "💍 Join James & Chileshe as they celebrate their wedding on 14 November 2026! 🤍✨",
+        url: window.location.href
+      };
+
+      try {
+        if (navigator.share) {
+          await navigator.share(shareData);
+        } else if (navigator.clipboard) {
+          await navigator.clipboard.writeText(shareData.url);
+          alert("Invitation link copied! Share it with your guests.");
+        } else {
+          prompt("Copy your invitation link:", shareData.url);
+        }
+      } catch (error) {
+        if (error.name !== "AbortError") {
+          alert("Please copy and share your invitation link.");
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
